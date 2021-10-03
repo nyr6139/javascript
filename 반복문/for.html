@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for문</title>
+</head>
+<body>
+  
+  <script>
+    // for (let i = 0; i < 반복 횟수; i++) {    -> 다른 반복문과 다르게 반복 변수를 let키워드로 선언.
+    //   문장
+    // }
+
+    // 1부터 100까지 더하기
+    let sum = 0;
+    for (let i=1; i<=100; i++) {
+      sum += i
+    }
+    console.log(`1~100까지 숫자를 더한 값은 ${sum}입니다.`)   // 1~100까지 숫자를 더한 값은 5050입니다.
+
+    // for문과 함께 배열 사용하기
+    const todosA = ['우유 구매', '청소', '식사 준비', '수업 준비'];
+    for (let i = 0; i < todosA.length; i++) {
+      console.log(`${i}번째 할일: ${todosA[i]}`)
+    }
+
+    // for 반복문으로 배열을 반대로 출력하기
+    const todosB = ['우유 구매', '청소', '식사 준비', '수업 준비'];
+    for (let i = todosB.length -1; i >= 0; i--) {
+      console.log(`${i}번째 할일: ${todosB[i]}`)
+    }
+  </script>
+</body>
+</html>
