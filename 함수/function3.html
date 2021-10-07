@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>매개변수의 활용</title>
+</head>
+<body>
+  
+  <script>
+    // 함수 이름(매개변수, 매개변수=기본값, 매개변수=기본값)
+    function earnings (name, wage=9000, hours=40) {
+      console.log(`# ${name} 님의 급여 정보`)
+      console.log(`- 시급: ${wage}원`)
+      console.log(`- 근무 시간: ${hours}시간`)
+      console.log(`- 급여: ${wage * hours}원`)
+      console.log('')
+    }
+    earnings('지영')
+    earnings('윤하', 10000)
+    earnings('미연', 12000, 30);
+  </script>
+</body>
+</html>
