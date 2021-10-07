@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글자 입력 양식 이벤트</title>
+</head>
+<body>
+  <input type="text">inch <br>
+  <button>계산</button>
+  <p></p>
+
+  <script>
+    const input = document.querySelector('input')
+    const button = document.querySelector('button')
+    const p = document.querySelector('p')
+
+    button.addEventListener('click', () => {
+      const inch = Number(input.value)
+      if (isNaN(inch)) {
+        p.textContent = '숫자를 입력해주세요!'
+        return;
+      }
+      const cm = inch * 2.54
+      p.textContent = `${cm} cm`
+    })
+  </script>
+</body>
+</html>
