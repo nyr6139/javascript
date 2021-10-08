@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>버튼 이벤트</title>
+</head>
+<body>
+  <!-- click 이벤트 -->
+  <button>글자1</button>
+  <input type="button" value="글자2">
+
+  <!-- submit 이벤트 -->
+  <form action="">
+    이메일 형식을 입력해주세요!<br>
+    <input type="text" name="test">
+    <input type="submit" value="글자3">
+  </form>
+
+  <script>
+    // --------------------click-------------------
+    const button1 = document.querySelector('button')
+    const button2 = document.querySelector('input[type=button]')
+    button1.addEventListener('click', (event) => {
+      event.currentTarget.textContent += '글자'
+    })
+    button2.addEventListener('click', (event) => {
+      event.currentTarget.value += '글자'
+    })
+
+    // ----------------------submit----------------
+    const form = document.querySelector('form')
+    form.addEventListener('submit', (event) => {
+      const text = document.querySelector('input[type=text]')
+      if (text.value.indexOf('@') >= 0) {
+        alert('정상적으로 제출합니다')
+      } else {
+        alert('이메일 형식을 입력해주세요')
+        event.preventDefault();
+      }
+    })
+  </script>
+</body>
+</html>
