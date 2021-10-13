@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="checkbox">
+  <span>링크 활성화</span>
+  <br>
+  <a href="http://www.naver.com">네이버</a>
+
+  <script>
+    let status = false
+    
+    const input = document.querySelector('input')
+    input.addEventListener('change', (e) => {
+      status = event.currentTarget.checked
+    })
+
+    const link = document.querySelector('a')
+    link.addEventListener('click', (e) => {
+      if (!status) {
+        event.preventDefault()
+      }
+    })
+  </script>
+</body>
+</html>
