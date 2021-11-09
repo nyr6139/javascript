@@ -28,3 +28,39 @@ const letters = arr.concat(arr2);   // ['a','b','c','d','e','f','g','h','i','j']
 
 // JOIN
 console.log(letters.join('-'));     // a - b - c - d - e - f - g - h - i - j
+
+
+// FOREACH(전체 배열 반복) (요소값, 인덱스, arr)
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+for (const movement of movements) {
+  if (movement > 0) {
+    console.log(`You deposited ${movement}`);
+  } else {
+    console.log(`You withdraw ${Math.abs(movement)}`);
+  }
+}
+
+console.log('--------FOREACH--------');
+movements.forEach(function(movement) {
+  if (movement > 0) {
+    console.log(`You deposited ${movement}`);
+  } else {
+    console.log(`You withdraw ${Math.abs(movement)}`);
+  }
+}) 
+// 0: function(200)
+// 1: function(450)
+// 2: function(400)
+// ...
+
+movements.forEach(function(mov, i, arr) {
+  if (mov > 0) {
+    console.log(`Movement ${i + 1}: You deposited ${mov}`);
+  } else {
+    console.log(`Movement ${i + 1}: You withdrew ${mov}`);
+  }
+});
+// Movement 1: You deposited 200
+// Movement 2: You deposited 450
+// Movement 3: You deposited 400
