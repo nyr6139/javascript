@@ -1,4 +1,4 @@
-// Objects
+// Objects(객체 내부에 있는 값 : 속성)
 // a collection of related data and/or functionality.
 // Nearly all objects in JavaScript are instances of Object 
 // object = key: value
@@ -27,6 +27,11 @@ function printValue(obj, key) {
 
 printValue(ellie, 'name');
 
+
+// ** (1). New {} is created **
+// ** (2). function is called, this = {빈 객체}**
+// ** (3). {} linked to prototype **
+// ** (4). function automatically return {} **
 
 // 3. Property value shorthand
 const person1 = { name: 'bob', age: 2};
@@ -58,5 +63,20 @@ const array = [1, 2, 3, 4];
 for(value of array){
   console.log(value);     // 1,2,3,4
 }
+
+//
+const students = []
+students.push({이름: '보라', 국어: 85, 수학: 30, 영어: 90, 과학: 65})
+students.push({이름: '뚜비', 국어: 75, 수학: 60, 영어: 60, 과학: 95})
+students.push({이름: '나나', 국어: 55, 수학: 50, 영어: 80, 과학: 75})
+students.push({이름: '뽀', 국어: 90, 수학: 70, 영어: 70, 과학: 85})
+
+let output = `이름\t총점\t평균\n`
+for(const s of students) {
+  const sum = s.국어 + s.수학 + s.영어 + s.과학
+  const average = sum / 4
+  output += `${s.이름}\t${sum}점\t${average}점\n`
+}
+console.log(output)
 
 // 7. cloning
