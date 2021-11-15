@@ -40,11 +40,13 @@ const person3 = { name: 'dave', age: 4};
 const person4 = new Person( 'ellie', 30);   // 위에서 처럼 계속 일일이 안만들고 함수를 사용해서 편하게 만듦
 console.log(person4); 
 
-// 4. Constructor Function
+// 4. Constructor Function(생성자 함수)
 function Person(name, age) {    // 위의 함수
   this.name = name;
   this.age = age;
 }
+
+const person1 = new Person('Amy', 23)   // 인스턴스 생성
 
 
 // 5. in operator : 해당하는 object안에 key가 있는지 없는지 확인
