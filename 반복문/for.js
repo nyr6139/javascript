@@ -10,4 +10,5 @@ for(let i=1; i <= 9; i++) {
   tableEl.append(trEl)
 }
 
+
 document.querySelector('body').append(tableEl);
