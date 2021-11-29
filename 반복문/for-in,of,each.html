@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for in, for of 반복문</title>
+  </head>
+  <body>
+    <script>
+      // -----------------for in-------------------------
+      // for(const 반복 변수 in 배열 또는 객체) {
+      //   문장
+      // }
+      // 반복 변수에 인덱스가 들어감
+
+      const todosA = ["우유 구매", "운동", "식사 준비"];
+      for (const i in todosA) {
+        console.log(`${i}번째 할 일 : ${todosA[i]}`);
+      }
+
+      // -----------------for of-------------------------
+      // for(const 반복 변수 of 배열 또는 객체) {
+      //     문장
+      // }
+      // 반복 변수에 요소 값이 들어감
+      const todosB = ["우유 구매", "운동", "식사 준비"];
+      for (const todo of todosB) {
+        console.log(`오늘의 할 일 : ${todo}`);
+      }
+
+      // -----------------for each-------------------------
+      var array = [3, 1, 4, 2, 8, 0, 9];
+      var sum = 0;
+
+      array.forEach(function (item, index) {
+        sum += item;
+        console.log(index + 1 + "번째: " + sum);
+      });
+    </script>
+  </body>
+</html>
